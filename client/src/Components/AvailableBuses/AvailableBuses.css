@@ -1,0 +1,105 @@
+/* .available-buses {
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.available-buses h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.available-buses p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.available-buses .bus-card {
+  margin-bottom: 15px;
+} */
+
+
+
+.available-buses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  /* background-color: #f9f9f9; */
+  min-height: 100vh;
+  margin-left: 30px;
+}
+
+.available-buses h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.available-buses p {
+  font-size: 18px;
+  color: #777;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.available-buses .bus-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.bus-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bus-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bus-card h2 {
+  font-size: 22px;
+  color: #ff6f61;
+  margin-bottom: 10px;
+}
+
+.bus-card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.bus-card .bus-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-top: 10px;
+}
+
+.bus-card .book-button {
+  background-color: #ff6f61;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.bus-card .book-button:hover {
+  background-color: #e05a4d;
+}

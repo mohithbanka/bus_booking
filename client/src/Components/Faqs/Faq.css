@@ -1,0 +1,112 @@
+/* General Reset for Mobile */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* FAQ Container */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.faq-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 15px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  width: 100%; /* Ensure it fits within the viewport */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.tab-button {
+  background-color: transparent;
+  /* margin: 0; */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #555;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab-button.active {
+  color: #ff6f61;
+  border-bottom: 2px solid #ff6f61;
+}
+
+.tab-button:hover {
+  color: #ff6f61;
+}
+
+/* FAQ Content */
+.faq-content {
+  text-align: left;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.faq-toggle {
+  font-size: 1.5rem;
+  color: #ff6f61;
+  font-weight: bold;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+.faq-item:hover .faq-question {
+  color: #ff6f61;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 600px) {
+  .tabs {
+    justify-content: space-between; /* Distribute tabs evenly */
+    width: 100%; /* Ensure full width within the viewport */
+    gap: 10px; /* Reduce gap for compact layout */
+  }
+
+  .tab-button {
+    font-size: 0.9rem; /* Adjust font size */
+    padding: 8px 15px; /* Adjust padding */
+  }
+
+  .faq-container h1 {
+    font-size: 1.5rem; /* Adjust heading size for smaller screens */
+  }
+}
