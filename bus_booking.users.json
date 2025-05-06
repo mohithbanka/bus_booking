@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "675db25553c15cbdccf6dd81"
+  },
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "hashed_password",
+  "phone_number": "1234567890",
+  "role": "user",
+  "created_at": {
+    "$date": "2024-12-14T16:29:09.056Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675db2d24fb8a1ccaac063ea"
+  },
+  "name": "John Doe",
+  "email": "kjrf.doe@example.com",
+  "password": "hashed_password",
+  "phone_number": "1234567890",
+  "role": "user",
+  "created_at": {
+    "$date": "2024-12-14T16:31:14.097Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67644c1e9fe65b32dfaa8e23"
+  },
+  "name": "Alice Johnson",
+  "email": "alice@example.com",
+  "password": "hashed_password1",
+  "phone_number": "9876543210",
+  "role": "user",
+  "created_at": {
+    "$date": "2024-12-19T16:38:54.065Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67644c1e9fe65b32dfaa8e24"
+  },
+  "name": "Bob Smith",
+  "email": "bob@example.com",
+  "password": "hashed_password2",
+  "phone_number": "1234567890",
+  "role": "admin",
+  "created_at": {
+    "$date": "2024-12-19T16:38:54.065Z"
+  },
+  "__v": 0
+}]
