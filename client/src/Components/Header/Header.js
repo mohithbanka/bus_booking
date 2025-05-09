@@ -1,14 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const [fromCity, setFromCity] = useState("");
-  const [toCity, setToCity] = useState("");
-  const [travelDate, setTravelDate] = useState("");
+  const [fromCity, setFromCity] = useState(() => localStorage.getItem("fromCity") || "");
+  const [toCity, setToCity] = useState(() => localStorage.getItem("toCity") || "");
+  const [travelDate, setTravelDate] = useState(() => localStorage.getItem("travelDate") || "");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const savedFromCity = localStorage.getItem("fromCity");
+    const savedToCity = localStorage.getItem("toCity");
+    const savedTravelDate = localStorage.getItem("travelDate");
+    if (savedFromCity) setFromCity(savedFromCity);
+    if (savedToCity) setToCity(savedToCity);
+    if (savedTravelDate) setTravelDate(savedTravelDate);
+  }, []);
 
   const handleSearch = () => {
     if (fromCity && toCity && travelDate) {
+      localStorage.setItem("fromCity", fromCity);
+      localStorage.setItem("toCity", toCity);
+      localStorage.setItem("travelDate", travelDate);
       navigate(`/search?fromCity=${fromCity}&toCity=${toCity}&travelDate=${travelDate}`);
     } else {
       alert("Please fill in all fields: From City, To City, and Travel Date.");
@@ -19,6 +31,9 @@ const Header = () => {
     setFromCity("");
     setToCity("");
     setTravelDate("");
+    localStorage.removeItem("fromCity");
+    localStorage.removeItem("toCity");
+    localStorage.removeItem("travelDate");
   };
 
   return (
@@ -65,7 +80,7 @@ const Header = () => {
               id="travelDate"
               value={travelDate}
               onChange={(e) => setTravelDate(e.target.value)}
-              min={new Date().toISOString().split("T")[0]} // Disable past dates
+              min={new Date().toISOString().split("T")[0]}
               className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary text-gray-800 placeholder-gray-400 transition-all duration-300"
               aria-required="true"
             />
