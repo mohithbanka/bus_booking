@@ -3785,3 +3785,12 @@
 {"level":"info","message":"GET /auth/me called","timestamp":"2025-05-09T11:17:44.437Z"}
 {"level":"info","message":"Token verified for user moh@gmail.com","timestamp":"2025-05-09T11:17:44.443Z"}
 {"level":"info","message":"Token verified for user moh@gmail.com","timestamp":"2025-05-09T11:17:44.453Z"}
+{"level":"info","message":"Connected to MongoDB for seeding","timestamp":"2025-05-09T16:05:38.171Z"}
+{"level":"info","message":"Cleared existing data","timestamp":"2025-05-09T16:05:38.907Z"}
+{"level":"info","message":"Seeded Users","timestamp":"2025-05-09T16:05:39.447Z"}
+{"level":"info","message":"Seeded Routes","timestamp":"2025-05-09T16:05:39.523Z"}
+{"level":"info","message":"Seeded Buses","timestamp":"2025-05-09T16:05:39.640Z"}
+{"level":"info","message":"Seeded Bookings","timestamp":"2025-05-09T16:05:39.733Z"}
+{"level":"info","message":"Seeded Payments","timestamp":"2025-05-09T16:05:39.804Z"}
+{"error":{},"level":"error","message":"Seeding failed","timestamp":"2025-05-09T16:05:39.807Z"}
+{"level":"info","message":"MongoDB connection closed","timestamp":"2025-05-09T16:05:39.822Z"}

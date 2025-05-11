@@ -24,12 +24,23 @@ async function migrate() {
           price: 500, // Default price in INR
           liveTracking: false,
           primo: false,
-          busNumber: { $cond: { if: "$bus_number", then: "$bus_number", else: mongoose.Types.ObjectId().toString() } },
+          busNumber: {
+            $cond: {
+              if: "$bus_number",
+              then: "$bus_number",
+              else: mongoose.Types.ObjectId().toString(),
+            },
+          },
           routeId: "$route_id",
           departureTime: "$departure_time",
           arrivalTime: "$arrival_time",
         },
-        $unset: { bus_number: 1, route_id: 1, departure_time: 1, arrival_time: 1 },
+        $unset: {
+          bus_number: 1,
+          route_id: 1,
+          departure_time: 1,
+          arrival_time: 1,
+        },
       }
     );
     logger.info("Migrated Bus documents");

@@ -65,11 +65,36 @@ async function seed() {
 
     // Seed Routes
     const routes = [
-      { source: "DELHI", destination: "MUMBAI", distance: 1400, duration: 1440 }, // 24h
-      { source: "BANGALORE", destination: "CHENNAI", distance: 350, duration: 360 }, // 6h
-      { source: "KOLKATA", destination: "DELHI", distance: 1500, duration: 1560 }, // 26h
-      { source: "MUMBAI", destination: "BANGALORE", distance: 1000, duration: 1080 }, // 18h
-      { source: "CHENNAI", destination: "HYDERABAD", distance: 700, duration: 720 }, // 12h
+      {
+        source: "DELHI",
+        destination: "MUMBAI",
+        distance: 1400,
+        duration: 1440,
+      }, // 24h
+      {
+        source: "BANGALORE",
+        destination: "CHENNAI",
+        distance: 350,
+        duration: 360,
+      }, // 6h
+      {
+        source: "KOLKATA",
+        destination: "DELHI",
+        distance: 1500,
+        duration: 1560,
+      }, // 26h
+      {
+        source: "MUMBAI",
+        destination: "BANGALORE",
+        distance: 1000,
+        duration: 1080,
+      }, // 18h
+      {
+        source: "CHENNAI",
+        destination: "HYDERABAD",
+        distance: 700,
+        duration: 720,
+      }, // 12h
       { source: "DELHI", destination: "JAIPUR", distance: 300, duration: 300 }, // 5h
     ];
     const insertedRoutes = await Route.insertMany(routes);
@@ -302,7 +327,12 @@ async function seed() {
       userId: booking.userId,
       bookingId: booking._id,
       amount: booking.totalAmount,
-      status: booking.status === "confirmed" ? "completed" : booking.status === "pending" ? "pending" : "failed",
+      status:
+        booking.status === "confirmed"
+          ? "completed"
+          : booking.status === "pending"
+          ? "pending"
+          : "failed",
       paymentMethod: ["card", "upi", "wallet"][index % 3],
       transactionId: `TXN_${Date.now()}_${index}`,
     }));
