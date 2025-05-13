@@ -21,7 +21,7 @@ router.post("/register", async (req, res) => {
   logger.info("POST /auth/register called");
   try {
     const { email, password, name } = req.body;
-    console.log(req.body);
+    // console.log(req.body);
     
     if (!email || !password || !name) {
       logger.warn("Register: Missing required fields");

@@ -7,7 +7,7 @@ const logger = require("../utils/logger");
 
 const router = express.Router();
 
-// Validation middleware
+// Validation middleware for booking creation
 const bookingValidation = [
   check("busId").isMongoId().withMessage("Invalid bus ID"),
   check("seatNumbers").isArray({ min: 1 }).withMessage("At least one seat number is required"),
@@ -29,6 +29,17 @@ router.post("/", authMiddleware, bookingValidation, async (req, res) => {
       return res.status(404).json({ message: "Bus not found" });
     }
 
+    // Check if seats are already booked
+    const existingBooking = await Booking.findOne({
+      busId,
+      journeyDate,
+      seatNumbers: { $in: seatNumbers },
+      status: { $ne: "cancelled" },
+    });
+    if (existingBooking) {
+      return res.status(400).json({ message: "One or more seats are already booked" });
+    }
+
     // Create booking
     const booking = new Booking({
       userId: req.user.id,
@@ -44,21 +55,56 @@ router.post("/", authMiddleware, bookingValidation, async (req, res) => {
     logger.info("Booking created", { userId: req.user.id, bookingId: booking._id });
     res.status(201).json({ booking });
   } catch (error) {
-    logger.error("Error creating booking", { error });
-    res.status(400).json({ message: error.message || "Failed to create booking" });
+    logger.error("Error creating booking", { error: error.message, stack: error.stack });
+    res.status(500).json({ message: error.message || "Failed to create booking" });
   }
 });
 
-// Get User Bookings (for /my-trips)
-router.get("/my-trips", authMiddleware, async (req, res) => {
+// Get User Bookings (for UserProfilepage and MyTrips)
+router.get("/", authMiddleware, async (req, res) => {
   try {
+    logger.info("Getting user bookings", { userId: req.user.id });
     const bookings = await Booking.find({ userId: req.user.id })
       .populate("busId", "busNumber operator type price departureTime arrivalTime")
       .populate("routeId", "source destination distance duration")
       .sort({ journeyDate: -1 });
-    res.json({ bookings });
+
+    // Adjust departure and arrival times to journey date
+    const adjustedBookings = bookings.map((booking) => {
+      const journeyDate = new Date(booking.journeyDate);
+      const departureTime = new Date(booking.busId.departureTime);
+      const arrivalTime = new Date(booking.busId.arrivalTime);
+
+      const adjustedDeparture = new Date(journeyDate);
+      adjustedDeparture.setUTCHours(
+        departureTime.getUTCHours(),
+        departureTime.getUTCMinutes(),
+        departureTime.getUTCSeconds()
+      );
+
+      const adjustedArrival = new Date(journeyDate);
+      adjustedArrival.setUTCHours(
+        arrivalTime.getUTCHours(),
+        arrivalTime.getUTCMinutes(),
+        arrivalTime.getUTCSeconds()
+      );
+      if (adjustedArrival <= adjustedDeparture) {
+        adjustedArrival.setUTCDate(adjustedArrival.getUTCDate() + 1);
+      }
+
+      return {
+        ...booking.toObject(),
+        busId: {
+          ...booking.busId.toObject(),
+          departureTime: adjustedDeparture,
+          arrivalTime: adjustedArrival,
+        },
+      };
+    });
+
+    res.status(200).json({ bookings: adjustedBookings });
   } catch (error) {
-    logger.error("Error fetching bookings", { error });
+    logger.error("Error fetching bookings", { userId: req.user.id, error: error.message, stack: error.stack });
     res.status(500).json({ message: "Failed to fetch bookings" });
   }
 });

@@ -36,6 +36,15 @@ const Header = () => {
     localStorage.removeItem("travelDate");
   };
 
+  const handleSwap = () => {
+    const temp = fromCity;
+    setFromCity(toCity);
+    setToCity(temp);
+    // Update localStorage with swapped values
+    localStorage.setItem("fromCity", toCity);
+    localStorage.setItem("toCity", temp);
+  };
+
   return (
     <header className="bg-gradient-to-r from-primary to-blue-600 text-white py-12 px-4 sm:px-6 lg:px-10 flex justify-center items-center min-h-[300px]">
       <div className="header-container max-w-4xl w-full">
@@ -57,6 +66,29 @@ const Header = () => {
               aria-required="true"
             />
           </div>
+
+          {/* Swap Button */}
+          <button
+            onClick={handleSwap}
+            className="p-2 text-gray-600 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary rounded-full transition-all duration-300"
+            aria-label="Swap From and To cities"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8 7h12m0 0l-4-4m4 4l-4 4m-12 6H4m0 0l4 4m-4-4l4-4"
+              />
+            </svg>
+          </button>
+
           <div className="w-full sm:flex-1">
             <label htmlFor="toCity" className="sr-only">
               To City

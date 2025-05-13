@@ -11,6 +11,7 @@ import axios from "axios";
 import MyTrips from "./Components/MyTrips/MyTrips";
 import BookingForm from "./Components/BookingForm/BookingForm";
 
+const REACT_APP_BACKEND_URL = "http://localhost:5000";
 const ErrorBoundary = ({ children }) => {
   const [hasError, setHasError] = useState(false);
 
@@ -62,7 +63,7 @@ const App = () => {
     const token = localStorage.getItem("token");
     if (token) {
       try {
-        const response = await axios.get("http://localhost:5000/auth/me", {
+        const response = await axios.get(`${REACT_APP_BACKEND_URL}/auth/me`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(response.data);

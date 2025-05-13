@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import ProfileHeader from "../Components/ProfileHeader/ProfileHeader";
 import UserInfoCard from "../Components/UserInfoCard/UserInfoCard";
 import BookingHistory from "../Components/BookingHistory/BookingHistory";
@@ -10,79 +12,92 @@ const UserProfilepage = () => {
   const [paymentMethods, setPaymentMethods] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
+
+  // const BACKEND_URL = process.env.REACT_APP_BACKEND_URL||"http://localhost:5000";
+  const BACKEND_URL = "http://localhost:5000";
+  console.log("BACKEND_URL:", BACKEND_URL);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-
+    console.log("Token:", token);
+    
     if (!token) {
       setError("Please log in to view your profile");
       setLoading(false);
+      navigate("/login");
       return;
     }
 
-    // Fetch user details
     const fetchUserData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/auth/me", {
-          method: "GET",
+        const response = await axios.get(`${BACKEND_URL}/auth/me`, {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
           },
+          timeout: 10000,
         });
-        if (!response.ok) throw new Error("Failed to fetch user data");
-        const data = await response.json();
-        setUserDetails(data.user);
+        setUserDetails(response.data.user);
       } catch (err) {
-        setError(err.message);
+        throw new Error(
+          err.response?.data?.message || "Failed to fetch user data"
+        );
       }
     };
 
-    // Fetch booking history
     const fetchBookings = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/bookings", {
-          method: "GET",
+        const response = await axios.get(`${BACKEND_URL}/api/bookings`, {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
           },
+          timeout: 10000,
         });
-        if (!response.ok) throw new Error("Failed to fetch bookings");
-        const data = await response.json();
-        setBookings(data.bookings || []);
+        setBookings(response.data.bookings || []);
       } catch (err) {
-        setError(err.message);
+        throw new Error(
+          err.response?.data?.message || "Failed to fetch bookings"
+        );
       }
     };
 
-    // Fetch payment methods
     const fetchPaymentMethods = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/payment-methods", {
-          method: "GET",
+        const response = await axios.get(`${BACKEND_URL}/api/payment-methods`, {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
           },
+          timeout: 10000,
         });
-        if (!response.ok) throw new Error("Failed to fetch payment methods");
-        const data = await response.json();
-        setPaymentMethods(data.paymentMethods || []);
+        setPaymentMethods(response.data.paymentMethods || []);
       } catch (err) {
-        setError(err.message);
+        throw new Error(
+          err.response?.data?.message || "Failed to fetch payment methods"
+        );
       }
     };
 
-    // Fetch all data
     const fetchAllData = async () => {
       setLoading(true);
-      await Promise.all([fetchUserData(), fetchBookings(), fetchPaymentMethods()]);
-      setLoading(false);
+      setError(null);
+      try {
+        await Promise.all([
+          fetchUserData(),
+          fetchBookings(),
+          fetchPaymentMethods(),
+        ]);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchAllData();
-  }, []);
+  }, [BACKEND_URL, navigate]);
 
   if (loading) {
     return (
@@ -102,7 +117,7 @@ const UserProfilepage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <ProfileHeader user={userDetails} />
+      {/* <ProfileHeader user={userDetails} /> */}
       <div className="container mx-auto p-4 md:p-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="md:col-span-1">

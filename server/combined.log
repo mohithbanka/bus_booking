@@ -3794,3 +3794,381 @@
 {"level":"info","message":"Seeded Payments","timestamp":"2025-05-09T16:05:39.804Z"}
 {"error":{},"level":"error","message":"Seeding failed","timestamp":"2025-05-09T16:05:39.807Z"}
 {"level":"info","message":"MongoDB connection closed","timestamp":"2025-05-09T16:05:39.822Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T10:11:05.868Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T10:11:09.964Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T10:15:48.636Z"}
+{"level":"info","message":"Register: User jone@f.com created successfully","timestamp":"2025-05-13T10:15:49.042Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T10:16:54.333Z"}
+{"level":"info","message":"Local strategy: User 12q3d@gmail.com authenticated successfully","timestamp":"2025-05-13T10:16:54.536Z"}
+{"level":"info","message":"Login: User 12q3d@gmail.com logged in successfully","timestamp":"2025-05-13T10:16:54.541Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T10:27:14.523Z"}
+{"level":"warn","message":"Register: Email 12d@gmail.com already registered","timestamp":"2025-05-13T10:27:14.637Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T10:27:16.236Z"}
+{"level":"warn","message":"Register: Email 12d@gmail.com already registered","timestamp":"2025-05-13T10:27:16.315Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T10:27:24.901Z"}
+{"level":"info","message":"Register: User 2d@gmail.com created successfully","timestamp":"2025-05-13T10:27:25.221Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T10:27:53.923Z"}
+{"level":"warn","message":"Register: Email 2d@gmail.com already registered","timestamp":"2025-05-13T10:27:54.001Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T10:28:54.570Z"}
+{"level":"warn","message":"Register: Email 2d@gmail.com already registered","timestamp":"2025-05-13T10:28:54.644Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T10:28:57.216Z"}
+{"level":"warn","message":"Register: Email 2d@gmail.com already registered","timestamp":"2025-05-13T10:28:57.305Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T10:29:00.943Z"}
+{"level":"info","message":"Register: User 24d@gmail.com created successfully","timestamp":"2025-05-13T10:29:01.239Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T10:30:02.486Z"}
+{"level":"info","message":"Local strategy: User 2d@gmail.com authenticated successfully","timestamp":"2025-05-13T10:30:02.708Z"}
+{"level":"info","message":"Login: User 2d@gmail.com logged in successfully","timestamp":"2025-05-13T10:30:02.711Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T10:34:29.643Z"}
+{"level":"warn","message":"Local strategy: User not found for email 1233@gmail.com","timestamp":"2025-05-13T10:34:29.734Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-13T10:34:29.739Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T10:34:30.687Z"}
+{"level":"warn","message":"Local strategy: User not found for email 1233@gmail.com","timestamp":"2025-05-13T10:34:30.774Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-13T10:34:30.775Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T10:34:32.409Z"}
+{"level":"warn","message":"Local strategy: User not found for email 1233@gmail.com","timestamp":"2025-05-13T10:34:32.495Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-13T10:34:32.496Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T10:34:55.713Z"}
+{"level":"warn","message":"Local strategy: Incorrect password for email 24d@gmail.com","timestamp":"2025-05-13T10:34:55.970Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-13T10:34:55.972Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T10:35:17.142Z"}
+{"level":"info","message":"Register: User 22d@gmail.com created successfully","timestamp":"2025-05-13T10:35:17.429Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T10:35:23.988Z"}
+{"level":"info","message":"Local strategy: User 22d@gmail.com authenticated successfully","timestamp":"2025-05-13T10:35:24.249Z"}
+{"level":"info","message":"Login: User 22d@gmail.com logged in successfully","timestamp":"2025-05-13T10:35:24.257Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T10:43:15.736Z"}
+{"level":"warn","message":"Register: Email 2d@gmail.com already registered","timestamp":"2025-05-13T10:43:16.870Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T10:43:55.374Z"}
+{"level":"warn","message":"Register: Email 2d@gmail.com already registered","timestamp":"2025-05-13T10:43:55.437Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T10:44:00.330Z"}
+{"level":"info","message":"Register: User 2d55@gmail.com created successfully","timestamp":"2025-05-13T10:44:00.671Z"}
+{"level":"info","message":"Connected to MongoDB for seeding","timestamp":"2025-05-13T10:52:47.306Z"}
+{"level":"info","message":"Cleared existing data","timestamp":"2025-05-13T10:52:47.461Z"}
+{"level":"info","message":"Seeded 5 Users","timestamp":"2025-05-13T10:52:47.913Z"}
+{"level":"info","message":"Seeded 6 Routes","timestamp":"2025-05-13T10:52:47.921Z"}
+{"error":{"_message":"Bus validation failed","errors":{"arrivalTime":{"kind":"date","message":"Cast to date failed for value \"08:00:00\" (type string) at path \"arrivalTime\"","name":"CastError","path":"arrivalTime","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"08:00:00\"","value":"08:00:00","valueType":"string"},"departureTime":{"kind":"date","message":"Cast to date failed for value \"08:00:00\" (type string) at path \"departureTime\"","name":"CastError","path":"departureTime","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"08:00:00\"","value":"08:00:00","valueType":"string"}},"message":"Bus validation failed: departureTime: Cast to date failed for value \"08:00:00\" (type string) at path \"departureTime\", arrivalTime: Cast to date failed for value \"08:00:00\" (type string) at path \"arrivalTime\"","name":"ValidationError"},"level":"error","message":"Seeding failed","timestamp":"2025-05-13T10:52:47.966Z"}
+{"level":"info","message":"MongoDB connection closed","timestamp":"2025-05-13T10:52:47.980Z"}
+{"level":"info","message":"Connected to MongoDB for seeding","timestamp":"2025-05-13T10:53:01.996Z"}
+{"level":"info","message":"Cleared existing data","timestamp":"2025-05-13T10:53:02.999Z"}
+{"level":"info","message":"Seeded 5 Users","timestamp":"2025-05-13T10:53:03.537Z"}
+{"level":"info","message":"Seeded 6 Routes","timestamp":"2025-05-13T10:53:03.612Z"}
+{"error":{"_message":"Bus validation failed","errors":{"arrivalTime":{"kind":"date","message":"Cast to date failed for value \"08:00:00\" (type string) at path \"arrivalTime\"","name":"CastError","path":"arrivalTime","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"08:00:00\"","value":"08:00:00","valueType":"string"},"departureTime":{"kind":"date","message":"Cast to date failed for value \"08:00:00\" (type string) at path \"departureTime\"","name":"CastError","path":"departureTime","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"08:00:00\"","value":"08:00:00","valueType":"string"}},"message":"Bus validation failed: departureTime: Cast to date failed for value \"08:00:00\" (type string) at path \"departureTime\", arrivalTime: Cast to date failed for value \"08:00:00\" (type string) at path \"arrivalTime\"","name":"ValidationError"},"level":"error","message":"Seeding failed","timestamp":"2025-05-13T10:53:03.649Z"}
+{"level":"info","message":"MongoDB connection closed","timestamp":"2025-05-13T10:53:03.659Z"}
+{"level":"info","message":"Connected to MongoDB for seeding","timestamp":"2025-05-13T10:57:51.986Z"}
+{"level":"info","message":"Cleared existing data","timestamp":"2025-05-13T10:57:52.137Z"}
+{"level":"info","message":"Seeded 5 Users","timestamp":"2025-05-13T10:57:52.600Z"}
+{"level":"info","message":"Seeded 6 Routes","timestamp":"2025-05-13T10:57:52.608Z"}
+{"level":"info","message":"Connected to MongoDB for seeding","timestamp":"2025-05-13T11:00:22.680Z"}
+{"level":"info","message":"Cleared existing data","timestamp":"2025-05-13T11:00:22.799Z"}
+{"level":"info","message":"Seeded 5 Users","timestamp":"2025-05-13T11:00:23.267Z"}
+{"level":"info","message":"Seeded 6 Routes","timestamp":"2025-05-13T11:00:23.276Z"}
+{"level":"info","message":"Seeded 12 Buses","timestamp":"2025-05-13T11:00:23.299Z"}
+{"level":"info","message":"Seeded 8 Bookings","timestamp":"2025-05-13T11:00:23.311Z"}
+{"level":"info","message":"Seeded 8 Payments","timestamp":"2025-05-13T11:00:23.319Z"}
+{"level":"info","message":"Updated Bookings with Payment IDs","timestamp":"2025-05-13T11:00:23.372Z"}
+{"level":"info","message":"Seeding completed successfully","timestamp":"2025-05-13T11:00:23.373Z"}
+{"level":"info","message":"MongoDB connection closed","timestamp":"2025-05-13T11:00:23.385Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T11:09:29.920Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T11:09:29.981Z"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T11:09:58.000Z","toCity":"mumbai","travelDate":"2025-05-17"}
+{"count":3,"fromCity":"DELHI","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T11:10:13.898Z","toCity":"MUMBAI","travelDate":"2025-05-14"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T11:11:17.748Z","toCity":"mumbai","travelDate":"2025-05-17"}
+{"count":2,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T11:11:23.779Z","toCity":"mumbai","travelDate":"2025-05-13"}
+{"currentDate":"2025-05-13T11:11:34.048Z","level":"warn","message":"Travel date is in the past","timestamp":"2025-05-13T11:11:34.048Z","travelDate":"2025-05-12"}
+{"currentDate":"2025-05-13T11:11:35.707Z","level":"warn","message":"Travel date is in the past","timestamp":"2025-05-13T11:11:35.708Z","travelDate":"2025-05-12"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T11:11:39.827Z","toCity":"mumbai","travelDate":"2025-05-15"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T11:12:44.417Z","toCity":"mumbai","travelDate":"2025-05-15"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T11:12:47.174Z","toCity":"mumbai","travelDate":"2025-05-15"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:13:19.722Z"}
+{"level":"warn","message":"Local strategy: User not found for email 24d@gmail.com","timestamp":"2025-05-13T11:13:19.734Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-13T11:13:19.735Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:13:22.469Z"}
+{"level":"warn","message":"Local strategy: User not found for email 24d@gmail.com","timestamp":"2025-05-13T11:13:22.475Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-13T11:13:22.476Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T11:17:01.613Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T11:17:01.672Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:17:10.602Z"}
+{"level":"warn","message":"Local strategy: User not found for email 24d@gmail.com","timestamp":"2025-05-13T11:17:10.670Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-13T11:17:10.671Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:17:12.894Z"}
+{"level":"warn","message":"Local strategy: User not found for email 24d@gmail.com","timestamp":"2025-05-13T11:17:12.900Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-13T11:17:12.901Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:17:16.805Z"}
+{"level":"warn","message":"Local strategy: User not found for email 2d55@gmail.com","timestamp":"2025-05-13T11:17:16.815Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-13T11:17:16.817Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:17:17.607Z"}
+{"level":"warn","message":"Local strategy: User not found for email 2d55@gmail.com","timestamp":"2025-05-13T11:17:17.617Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-13T11:17:17.619Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:17:18.287Z"}
+{"level":"warn","message":"Local strategy: User not found for email 2d55@gmail.com","timestamp":"2025-05-13T11:17:18.297Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-13T11:17:18.298Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:17:18.893Z"}
+{"level":"warn","message":"Local strategy: User not found for email 2d55@gmail.com","timestamp":"2025-05-13T11:17:18.899Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-13T11:17:18.900Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:17:19.607Z"}
+{"level":"warn","message":"Local strategy: User not found for email 2d55@gmail.com","timestamp":"2025-05-13T11:17:19.622Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-13T11:17:19.623Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T11:18:01.520Z"}
+{"level":"info","message":"Register: User 1q3d@gmail.com created successfully","timestamp":"2025-05-13T11:18:01.786Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T11:18:49.875Z"}
+{"level":"info","message":"Register: User mohithbanka285@gmail.com created successfully","timestamp":"2025-05-13T11:18:50.052Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:18:55.840Z"}
+{"level":"info","message":"Local strategy: User mohithbanka285@gmail.com authenticated successfully","timestamp":"2025-05-13T11:18:56.022Z"}
+{"level":"info","message":"Login: User mohithbanka285@gmail.com logged in successfully","timestamp":"2025-05-13T11:18:56.026Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T11:21:45.824Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T11:21:45.875Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:23:18.914Z"}
+{"level":"info","message":"Local strategy: User mohithbanka285@gmail.com authenticated successfully","timestamp":"2025-05-13T11:23:19.154Z"}
+{"level":"info","message":"Login: User mohithbanka285@gmail.com logged in successfully","timestamp":"2025-05-13T11:23:19.176Z"}
+{"level":"warn","message":"No token provided","timestamp":"2025-05-13T11:25:26.931Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-13T11:26:22.847Z"}
+{"level":"info","message":"Register: User 22d@gmail.com created successfully","timestamp":"2025-05-13T11:26:23.073Z"}
+{"level":"warn","message":"No token provided","timestamp":"2025-05-13T11:26:52.286Z"}
+{"level":"warn","message":"No token provided","timestamp":"2025-05-13T11:27:46.773Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:29:23.519Z"}
+{"level":"info","message":"Local strategy: User 22d@gmail.com authenticated successfully","timestamp":"2025-05-13T11:29:23.732Z"}
+{"level":"info","message":"Login: User 22d@gmail.com logged in successfully","timestamp":"2025-05-13T11:29:23.742Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T11:30:50.762Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T11:30:50.834Z"}
+{"level":"warn","message":"No token provided","timestamp":"2025-05-13T11:32:14.214Z"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T11:32:26.237Z","toCity":"mumbai","travelDate":"2025-05-15"}
+{"level":"warn","message":"No token provided","timestamp":"2025-05-13T11:34:22.066Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T11:35:30.307Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T11:38:09.047Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T11:38:10.674Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:39:13.382Z"}
+{"level":"info","message":"Local strategy: User 22d@gmail.com authenticated successfully","timestamp":"2025-05-13T11:39:13.546Z"}
+{"level":"info","message":"Login: User 22d@gmail.com logged in successfully","timestamp":"2025-05-13T11:39:13.560Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:39:33.996Z"}
+{"level":"info","message":"Local strategy: User mohithbanka285@gmail.com authenticated successfully","timestamp":"2025-05-13T11:39:34.168Z"}
+{"level":"info","message":"Login: User mohithbanka285@gmail.com logged in successfully","timestamp":"2025-05-13T11:39:34.173Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T11:39:43.528Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:42:01.737Z"}
+{"level":"info","message":"Local strategy: User mohithbanka285@gmail.com authenticated successfully","timestamp":"2025-05-13T11:42:02.004Z"}
+{"level":"info","message":"Login: User mohithbanka285@gmail.com logged in successfully","timestamp":"2025-05-13T11:42:02.025Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:43:18.306Z"}
+{"level":"info","message":"Local strategy: User mohithbanka285@gmail.com authenticated successfully","timestamp":"2025-05-13T11:43:18.495Z"}
+{"level":"info","message":"Login: User mohithbanka285@gmail.com logged in successfully","timestamp":"2025-05-13T11:43:18.500Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T11:44:58.432Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T11:44:58.490Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T11:45:09.402Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T11:45:09.403Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:46:57.789Z"}
+{"level":"info","message":"Local strategy: User mohithbanka285@gmail.com authenticated successfully","timestamp":"2025-05-13T11:46:58.036Z"}
+{"level":"info","message":"Login: User mohithbanka285@gmail.com logged in successfully","timestamp":"2025-05-13T11:46:58.043Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T11:48:34.242Z"}
+{"level":"info","message":"Local strategy: User mohithbanka285@gmail.com authenticated successfully","timestamp":"2025-05-13T11:48:34.472Z"}
+{"level":"info","message":"Login: User mohithbanka285@gmail.com logged in successfully","timestamp":"2025-05-13T11:48:34.477Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:48:34.590Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T11:48:34.592Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:48:53.017Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:48:53.028Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T11:48:53.029Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:48:53.839Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T11:48:53.840Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:48:53.848Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:48:53.861Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:49:04.148Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T11:49:04.149Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:49:04.156Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:49:04.163Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:49:06.132Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T11:49:06.133Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:49:06.141Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:49:06.147Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:49:07.012Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T11:49:07.012Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:49:07.017Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T11:49:07.023Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T13:53:44.214Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T13:53:44.472Z"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T13:55:22.267Z","toCity":"mumbai","travelDate":"2025-05-15"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T13:55:27.029Z","toCity":"mumbai","travelDate":"2025-05-15"}
+{"fromCity":"Delhi, Delhi","level":"info","message":"No routes found","timestamp":"2025-05-13T13:55:39.125Z","toCity":"mumbai"}
+{"fromCity":"Delhi, Delhi","level":"info","message":"No routes found","timestamp":"2025-05-13T13:55:40.122Z","toCity":"mumbai"}
+{"fromCity":"Delhi, Delhi","level":"info","message":"No routes found","timestamp":"2025-05-13T13:55:40.777Z","toCity":"mumbai"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T13:55:46.528Z","toCity":"mumbai","travelDate":"2025-05-16"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T13:55:58.185Z"}
+{"level":"info","message":"Local strategy: User mohithbanka285@gmail.com authenticated successfully","timestamp":"2025-05-13T13:55:58.576Z"}
+{"level":"info","message":"Login: User mohithbanka285@gmail.com logged in successfully","timestamp":"2025-05-13T13:55:58.649Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:55:58.737Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T13:55:58.739Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:55:58.753Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:55:58.777Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T13:56:28.271Z"}
+{"level":"info","message":"Local strategy: User mohithbanka285@gmail.com authenticated successfully","timestamp":"2025-05-13T13:56:28.393Z"}
+{"level":"info","message":"Login: User mohithbanka285@gmail.com logged in successfully","timestamp":"2025-05-13T13:56:28.397Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:56:28.445Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T13:56:28.446Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:56:28.451Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:56:28.459Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:57:11.107Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T13:57:11.109Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:57:11.115Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:57:11.124Z"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T13:57:15.326Z","toCity":"mumbai","travelDate":"2025-05-16"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:57:16.714Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T13:57:16.715Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:57:16.725Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:57:16.742Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:57:38.050Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T13:57:38.050Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:57:38.158Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T13:57:38.159Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:57:38.175Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:57:38.182Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:58:10.163Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T13:58:10.165Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:58:10.170Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:58:10.177Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:58:15.338Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T13:58:15.339Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:58:15.348Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:58:15.371Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:58:24.710Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T13:58:24.711Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:58:24.719Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:58:24.735Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:59:40.922Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T13:59:40.924Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:59:45.935Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T13:59:45.936Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:59:51.929Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T13:59:51.931Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T13:59:56.921Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T13:59:56.922Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T14:00:56.930Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:00:56.931Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T14:02:08.927Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T14:02:09.934Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T14:04:28.128Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T14:04:28.184Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T14:04:34.379Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T14:04:36.782Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T14:04:36.796Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:04:36.798Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T14:04:36.813Z"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T14:04:43.196Z","toCity":"mumbai","travelDate":"2025-05-16"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T14:04:48.058Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:04:48.059Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T14:04:48.066Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T14:04:48.074Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:08:05.211Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T14:08:32.447Z"}
+{"level":"info","message":"Local strategy: User 22d@gmail.com authenticated successfully","timestamp":"2025-05-13T14:08:32.752Z"}
+{"level":"info","message":"Login: User 22d@gmail.com logged in successfully","timestamp":"2025-05-13T14:08:32.779Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T14:09:11.024Z"}
+{"level":"info","message":"Local strategy: User 22d@gmail.com authenticated successfully","timestamp":"2025-05-13T14:09:11.852Z"}
+{"level":"info","message":"Login: User 22d@gmail.com logged in successfully","timestamp":"2025-05-13T14:09:11.862Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T14:09:15.109Z"}
+{"level":"info","message":"Local strategy: User 22d@gmail.com authenticated successfully","timestamp":"2025-05-13T14:09:15.316Z"}
+{"level":"info","message":"Login: User 22d@gmail.com logged in successfully","timestamp":"2025-05-13T14:09:15.321Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T14:09:19.717Z"}
+{"level":"info","message":"Local strategy: User 22d@gmail.com authenticated successfully","timestamp":"2025-05-13T14:09:19.929Z"}
+{"level":"info","message":"Login: User 22d@gmail.com logged in successfully","timestamp":"2025-05-13T14:09:19.934Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:09:56.391Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:12:11.135Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T14:12:58.289Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:12:58.290Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T14:12:58.302Z"}
+{"level":"info","message":"Token verified for user mohithbanka285@gmail.com","timestamp":"2025-05-13T14:12:58.319Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-13T14:13:04.131Z"}
+{"level":"info","message":"Local strategy: User 22d@gmail.com authenticated successfully","timestamp":"2025-05-13T14:13:04.399Z"}
+{"level":"info","message":"Login: User 22d@gmail.com logged in successfully","timestamp":"2025-05-13T14:13:04.406Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:13:04.480Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:13:04.482Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:13:04.498Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:13:04.507Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:13:07.176Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:15:29.002Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:15:29.006Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:15:29.044Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:15:30.928Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:15:35.635Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:16:03.909Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T14:16:29.374Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T14:16:31.448Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T14:16:31.501Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:17:06.017Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:17:06.019Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:17:06.113Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T14:17:18.422Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T14:17:18.469Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:17:20.503Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:17:20.506Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:17:20.570Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T14:17:50.880Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T14:17:50.929Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:17:56.711Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:17:56.712Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:17:56.771Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:18:26.124Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:18:29.611Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:18:45.067Z"}
+{"error":"log is not defined","level":"error","message":"Error fetching bookings","stack":"ReferenceError: log is not defined\n    at M:\\New folder\\busbooking\\server\\routes\\bookings.js:66:5\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at module.exports (M:\\New folder\\busbooking\\server\\middleware\\auth.js:15:5)\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2025-05-13T14:18:45.069Z","userId":"68232c5fcdfefa3de0cf7304"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:19:21.352Z"}
+{"error":"log is not defined","level":"error","message":"Error fetching bookings","stack":"ReferenceError: log is not defined\n    at M:\\New folder\\busbooking\\server\\routes\\bookings.js:66:5\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at module.exports (M:\\New folder\\busbooking\\server\\middleware\\auth.js:15:5)\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2025-05-13T14:19:21.354Z","userId":"68232c5fcdfefa3de0cf7304"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:19:34.979Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:19:52.352Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:20:26.173Z"}
+{"error":"log is not defined","level":"error","message":"Error fetching bookings","stack":"ReferenceError: log is not defined\n    at M:\\New folder\\busbooking\\server\\routes\\bookings.js:66:5\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at module.exports (M:\\New folder\\busbooking\\server\\middleware\\auth.js:15:5)\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2025-05-13T14:20:26.174Z","userId":"68232c5fcdfefa3de0cf7304"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:20:39.799Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:20:39.811Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:20:39.930Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:20:39.937Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:20:40.060Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:20:40.093Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:20:42.352Z"}
+{"error":"log is not defined","level":"error","message":"Error fetching bookings","stack":"ReferenceError: log is not defined\n    at M:\\New folder\\busbooking\\server\\routes\\bookings.js:66:5\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at module.exports (M:\\New folder\\busbooking\\server\\middleware\\auth.js:15:5)\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2025-05-13T14:20:42.354Z","userId":"68232c5fcdfefa3de0cf7304"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:22:13.397Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:22:19.554Z"}
+{"error":"log is not defined","level":"error","message":"Error fetching bookings","stack":"ReferenceError: log is not defined\n    at M:\\New folder\\busbooking\\server\\routes\\bookings.js:66:5\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at module.exports (M:\\New folder\\busbooking\\server\\middleware\\auth.js:15:5)\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (M:\\New folder\\busbooking\\server\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2025-05-13T14:22:19.555Z","userId":"68232c5fcdfefa3de0cf7304"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T14:22:47.686Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T14:22:47.773Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:22:49.871Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:22:51.379Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:33:52.169Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T14:34:10.698Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T14:34:10.794Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:34:15.160Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:34:15.161Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:34:15.276Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:34:25.769Z"}
+{"level":"info","message":"Getting user bookings","timestamp":"2025-05-13T14:34:25.772Z","userId":"68232c5fcdfefa3de0cf7304"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:35:30.645Z"}
+{"level":"info","message":"Getting user bookings","timestamp":"2025-05-13T14:35:30.647Z","userId":"68232c5fcdfefa3de0cf7304"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T14:35:46.372Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T14:35:46.418Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T14:36:00.453Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T14:36:00.491Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:36:03.272Z"}
+{"level":"info","message":"Getting user bookings","timestamp":"2025-05-13T14:36:03.275Z","userId":"68232c5fcdfefa3de0cf7304"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T14:36:15.547Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T14:36:15.616Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-13T14:36:17.245Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-13T14:36:17.283Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:42:02.156Z"}
+{"level":"info","message":"Getting user bookings","timestamp":"2025-05-13T14:42:02.188Z","userId":"68232c5fcdfefa3de0cf7304"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:42:12.020Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:42:12.022Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:42:12.158Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:45:27.962Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:45:32.863Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:45:32.865Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:45:32.969Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:46:41.937Z"}
+{"level":"info","message":"Getting user bookings","timestamp":"2025-05-13T14:46:41.939Z","userId":"68232c5fcdfefa3de0cf7304"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:46:47.535Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:47:08.202Z"}
+{"level":"info","message":"Getting user bookings","timestamp":"2025-05-13T14:47:08.203Z","userId":"68232c5fcdfefa3de0cf7304"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:47:21.788Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:47:21.790Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:47:21.797Z"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:47:21.815Z"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T14:48:56.692Z","toCity":"mumbai","travelDate":"2025-05-16"}
+{"level":"info","message":"Token verified for user 22d@gmail.com","timestamp":"2025-05-13T14:49:41.102Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-13T14:49:41.104Z"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T14:49:53.376Z","toCity":"mumbai","travelDate":"2025-05-16"}
+{"fromCity":"mumbai","level":"info","message":"No routes found","timestamp":"2025-05-13T14:49:57.151Z","toCity":"Delhi"}
+{"fromCity":"mumbai","level":"info","message":"No routes found","timestamp":"2025-05-13T14:49:58.049Z","toCity":"Delhi"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T14:50:02.892Z","toCity":"mumbai","travelDate":"2025-05-16"}
+{"count":3,"fromCity":"Delhi","level":"info","message":"Buses fetched successfully","timestamp":"2025-05-13T14:50:57.316Z","toCity":"mumbai","travelDate":"2025-05-16"}

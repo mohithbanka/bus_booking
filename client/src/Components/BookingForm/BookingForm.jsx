@@ -22,15 +22,17 @@ const BookingForm = ({ user }) => {
     setError(null);
     try {
       const response = await axios.post(
-        "http://localhost:5000/bookings",
+        `${process.env.REACT_APP_BACKEND_URL}/bookings`,  // Using dynamic URL from .env
         {
           busId,
           seatNumbers,
           journeyDate: queryParams.get("travelDate"),
-          totalAmount: seatNumbers.length * 1500, // Fetch from bus price
+          totalAmount: seatNumbers.length * 1500, // Assuming price per seat is 1500
           paymentMethod,
         },
-        { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+        }
       );
       navigate("/my-trips");
       window.gtag("event", "booking_created", {
