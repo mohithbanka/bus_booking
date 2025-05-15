@@ -8,7 +8,7 @@ const API_BASE_URL =
   (process.env.NODE_ENV === "production"
     ? "https://bus-booking-cw48.onrender.com"
     : "http://localhost:5000");
-console.log("API_BASE_URL:", API_BASE_URL);
+// console.log("API_BASE_URL:", API_BASE_URL);
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -50,7 +50,7 @@ const Register = () => {
         email,
         password,
       });
-      console.log("Register Response:", response.data);
+      // console.log("Register Response:", response.data);
       navigate("/login", {
         state: { message: "Registration successful! Please log in." },
       });

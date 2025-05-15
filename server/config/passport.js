@@ -15,7 +15,7 @@ passport.use(
       try {
         const user = await User.findOne({ email: email.toLowerCase() });
         if (!user) {
-          logger.warn(`Local strategy: User not found for email ${email}`);
+          // logger.warn(`Local strategy: User not found for email ${email}`);
           return done(null, false, { message: "Invalid email or password" });
         }
 

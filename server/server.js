@@ -12,7 +12,7 @@ dotenv.config();
 // Initialize Passport
 try {
   require("./config/passport");
-  console.log("Passport configuration loaded successfully");
+  // console.log("Passport configuration loaded successfully");
 } catch (error) {
   console.error("Failed to load Passport configuration:", error);
   process.exit(1);

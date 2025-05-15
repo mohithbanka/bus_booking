@@ -18,18 +18,18 @@ router.get("/", async (req, res) => {
     } = req.query;
 
     // Log incoming query parameters
-    logger.debug("Received query parameters", { query: req.query });
+    // logger.debug("Received query parameters", { query: req.query });
 
     // Input validation
     if (!fromCity || !toCity || !travelDate) {
-      logger.warn("Missing required query parameters", { query: req.query });
+      // logger.warn("Missing required query parameters", { query: req.query });
       return res.status(400).json({ message: "From city, to city, and travel date are required" });
     }
 
     // Validate and parse travelDate
     const travelDateObj = new Date(travelDate);
     if (isNaN(travelDateObj.getTime())) {
-      logger.warn("Invalid travel date format", { travelDate });
+      // logger.warn("Invalid travel date format", { travelDate });
       return res.status(400).json({ message: "Invalid travel date format" });
     }
 
@@ -37,12 +37,12 @@ router.get("/", async (req, res) => {
     const currentDate = new Date();
     const travelDateOnly = new Date(Date.UTC(travelDateObj.getUTCFullYear(), travelDateObj.getUTCMonth(), travelDateObj.getUTCDate()));
     const currentDateOnly = new Date(Date.UTC(currentDate.getUTCFullYear(), currentDate.getUTCMonth(), currentDate.getUTCDate()));
-    logger.debug("Date comparison", {
-      travelDateOnly: travelDateOnly.toISOString(),
-      currentDateOnly: currentDateOnly.toISOString(),
-    });
+    // logger.debug("Date comparison", {
+    //   travelDateOnly: travelDateOnly.toISOString(),
+    //   currentDateOnly: currentDateOnly.toISOString(),
+    // });
     if (travelDateOnly < currentDateOnly) {
-      logger.warn("Travel date is in the past", { travelDate, currentDate });
+      // logger.warn("Travel date is in the past", { travelDate, currentDate });
       return res.status(400).json({ message: "Travel date cannot be in the past" });
     }
 
@@ -53,7 +53,7 @@ router.get("/", async (req, res) => {
     });
 
     if (matchingRoutes.length === 0) {
-      logger.info("No routes found", { fromCity, toCity });
+      // logger.info("No routes found", { fromCity, toCity });
       return res.status(404).json({ message: `No routes found from ${fromCity} to ${toCity}` });
     }
 
@@ -72,7 +72,7 @@ router.get("/", async (req, res) => {
     if (seatsAvailable) {
       const seats = parseInt(seatsAvailable);
       if (isNaN(seats) || seats < 1) {
-        logger.warn("Invalid seatsAvailable value", { seatsAvailable });
+        // logger.warn("Invalid seatsAvailable value", { seatsAvailable });
         return res.status(400).json({ message: "Seats available must be a positive number" });
       }
       query.seatsAvailable = { $gte: seats };
@@ -85,7 +85,7 @@ router.get("/", async (req, res) => {
     );
 
     if (buses.length === 0) {
-      logger.info("No buses available", { query });
+      // logger.info("No buses available", { query });
       return res.status(404).json({ message: "No buses available for the selected criteria" });
     }
 
@@ -138,15 +138,15 @@ router.get("/", async (req, res) => {
       return res.status(404).json({ message: "No buses available for the selected criteria" });
     }
 
-    logger.info("Buses fetched successfully", {
-      fromCity,
-      toCity,
-      travelDate,
-      count: adjustedBuses.length,
-    });
+    // logger.info("Buses fetched successfully", {
+    //   fromCity,
+    //   toCity,
+    //   travelDate,
+    //   count: adjustedBuses.length,
+    // });
     res.status(200).json({ buses: adjustedBuses });
   } catch (error) {
-    logger.error("Error fetching buses", { error: error.message, stack: error.stack });
+    // logger.error("Error fetching buses", { error: error.message, stack: error.stack });
     res.status(500).json({ message: "Failed to fetch buses" });
   }
 });

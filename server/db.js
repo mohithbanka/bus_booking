@@ -88,7 +88,7 @@ const insertBuses = async () => {
         arrival_time: new Date("2024-12-21T13:00:00"),
       },
     ]);
-    console.log("Buses inserted successfully!");
+    // console.log("Buses inserted successfully!");
   } catch (error) {
     console.error("Error inserting buses:", error.message);
   }

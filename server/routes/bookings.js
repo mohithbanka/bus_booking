@@ -52,10 +52,10 @@ router.post("/", authMiddleware, bookingValidation, async (req, res) => {
     });
 
     await booking.save();
-    logger.info("Booking created", { userId: req.user.id, bookingId: booking._id });
+    // logger.info("Booking created", { userId: req.user.id, bookingId: booking._id });
     res.status(201).json({ booking });
   } catch (error) {
-    logger.error("Error creating booking", { error: error.message, stack: error.stack });
+    // logger.error("Error creating booking", { error: error.message, stack: error.stack });
     res.status(500).json({ message: error.message || "Failed to create booking" });
   }
 });
@@ -63,7 +63,7 @@ router.post("/", authMiddleware, bookingValidation, async (req, res) => {
 // Get User Bookings (for UserProfilepage and MyTrips)
 router.get("/", authMiddleware, async (req, res) => {
   try {
-    logger.info("Getting user bookings", { userId: req.user.id });
+    // logger.info("Getting user bookings", { userId: req.user.id });
     const bookings = await Booking.find({ userId: req.user.id })
       .populate("busId", "busNumber operator type price departureTime arrivalTime")
       .populate("routeId", "source destination distance duration")
@@ -104,7 +104,7 @@ router.get("/", authMiddleware, async (req, res) => {
 
     res.status(200).json({ bookings: adjustedBookings });
   } catch (error) {
-    logger.error("Error fetching bookings", { userId: req.user.id, error: error.message, stack: error.stack });
+    // logger.error("Error fetching bookings", { userId: req.user.id, error: error.message, stack: error.stack });
     res.status(500).json({ message: "Failed to fetch bookings" });
   }
 });
