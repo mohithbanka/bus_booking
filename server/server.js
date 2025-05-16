@@ -30,7 +30,7 @@ const port = process.env.PORT || 5000;
 // CORS Configuration
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://your-frontend-domain.vercel.app", // Replace with your deployed frontend URL
+  "https://quickroutebusbooking.vercel.app", 
 ];
 
 app.use(
