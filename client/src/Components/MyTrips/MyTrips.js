@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const REACT_APP_API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
+console.log("REACT_APP_API_URL:", REACT_APP_API_URL);
 
 const MyTrips = ({ user }) => {
   const [bookings, setBookings] = useState([]);
@@ -38,7 +39,11 @@ const MyTrips = ({ user }) => {
     <div className="container mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold text-primary mb-6">My Trips</h2>
       {loading && (
-        <div className="text-center text-gray-600" role="status" aria-live="polite">
+        <div
+          className="text-center text-gray-600"
+          role="status"
+          aria-live="polite"
+        >
           <svg
             className="animate-spin h-8 w-8 mx-auto text-primary"
             xmlns="http://www.w3.org/2000/svg"
@@ -63,14 +68,21 @@ const MyTrips = ({ user }) => {
         </div>
       )}
       {error && (
-        <div className="text-center text-red-500 bg-red-100 p-4 rounded-md mb-6" role="alert">
+        <div
+          className="text-center text-red-500 bg-red-100 p-4 rounded-md mb-6"
+          role="alert"
+        >
           {error}
         </div>
       )}
       {!loading && !error && bookings.length > 0 ? (
         <div className="space-y-6" role="list" aria-label="My bookings">
           {bookings.map((booking) => (
-            <div key={booking._id} className="bg-white p-6 rounded-lg shadow-md" role="listitem">
+            <div
+              key={booking._id}
+              className="bg-white p-6 rounded-lg shadow-md"
+              role="listitem"
+            >
               <h3 className="text-lg font-bold text-primary">
                 {booking.busId.busNumber} ({booking.busId.operator})
               </h3>
@@ -81,10 +93,12 @@ const MyTrips = ({ user }) => {
                 Journey: {new Date(booking.journeyDate).toLocaleString()}
               </p>
               <p className="text-gray-600">
-                Departure: {new Date(booking.busId.departureTime).toLocaleTimeString()}
+                Departure:{" "}
+                {new Date(booking.busId.departureTime).toLocaleTimeString()}
               </p>
               <p className="text-gray-600">
-                Arrival: {new Date(booking.busId.arrivalTime).toLocaleTimeString()}
+                Arrival:{" "}
+                {new Date(booking.busId.arrivalTime).toLocaleTimeString()}
               </p>
               <p className="text-gray-600">
                 Seats: {booking.seatNumbers.join(", ")}
@@ -103,7 +117,11 @@ const MyTrips = ({ user }) => {
       ) : (
         !loading &&
         !error && (
-          <div className="text-center text-gray-600 bg-gray-100 p-4 rounded-md" role="status" aria-live="polite">
+          <div
+            className="text-center text-gray-600 bg-gray-100 p-4 rounded-md"
+            role="status"
+            aria-live="polite"
+          >
             No bookings found.
           </div>
         )

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import ProfileHeader from "../Components/ProfileHeader/ProfileHeader";
+// import ProfileHeader from "../Components/ProfileHeader/ProfileHeader";
 import UserInfoCard from "../Components/UserInfoCard/UserInfoCard";
 import BookingHistory from "../Components/BookingHistory/BookingHistory";
 import PaymentMethods from "../Components/PaymentMethods/PaymentMethods";
+const BACKEND_URL = process.env.REACT_APP_API_URL;
+// console.log("REACT_APP_BACKEND_URL:", BACKEND_URL);
 
 const UserProfilepage = () => {
   const [userDetails, setUserDetails] = useState(null);
@@ -15,13 +17,13 @@ const UserProfilepage = () => {
   const navigate = useNavigate();
 
   // const BACKEND_URL = process.env.REACT_APP_BACKEND_URL||"http://localhost:5000";
-  const BACKEND_URL = "http://localhost:5000";
-  console.log("BACKEND_URL:", BACKEND_URL);
+  // const BACKEND_URL = "http://localhost:5000";
+  // console.log("BACKEND_URL:", BACKEND_URL);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    console.log("Token:", token);
-    
+    // console.log("Token:", token);
+
     if (!token) {
       setError("Please log in to view your profile");
       setLoading(false);

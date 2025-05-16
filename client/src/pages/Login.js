@@ -3,12 +3,13 @@ import { useNavigate, Link, useLocation } from "react-router-dom";
 import axios from "axios";
 
 // Define API_BASE_URL with proper fallback (remove trailing space)
-const API_BASE_URL =
-  process.env.REACT_APP_API_URL ||
-  (process.env.NODE_ENV === "production"
-    ? "https://bus-booking-cw48.onrender.com"
-    : "http://localhost:5000");
-// console.log("API_BASE_URL:", API_BASE_URL);
+// const API_BASE_URL =
+//   process.env.REACT_APP_API_URL ||
+//   (process.env.NODE_ENV === "production"
+//     ? "https://bus-booking-cw48.onrender.com"
+//     : "http://localhost:5000");
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+console.log("API_BASE_URL:", API_BASE_URL);
 
 const Login = ({ setUser }) => {
   const [email, setEmail] = useState("");
@@ -33,7 +34,7 @@ const Login = ({ setUser }) => {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {
-          console.log("Google Auth Success:", response.data);
+          // console.log("Google Auth Success:", response.data);
           setUser(response.data);
           navigate("/my-profile", { replace: true });
           if (window.gtag) {
@@ -44,7 +45,7 @@ const Login = ({ setUser }) => {
           }
         })
         .catch((err) => {
-          console.error("Google Auth Error:", err);
+          // console.error("Google Auth Error:", err);
           setApiError(
             err.response?.data?.message || "Failed to authenticate with Google"
           );
@@ -85,7 +86,7 @@ const Login = ({ setUser }) => {
         email,
         password,
       });
-      console.log("Login Response:", response.data);
+      // console.log("Login Response:", response.data);
       const { token, user } = response.data;
       localStorage.setItem("token", token);
       setUser(user);
@@ -97,7 +98,7 @@ const Login = ({ setUser }) => {
         });
       }
     } catch (error) {
-      console.error("Login Error:", error);
+      // console.error("Login Error:", error);
       setApiError(
         error.response?.data?.message ||
           error.message ||

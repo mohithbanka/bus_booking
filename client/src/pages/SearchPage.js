@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import Sidebar from "../Components/Sidebar/Sidebar";
+import Sidebar from "../Components/Sidebar/Sidebar.js";
 import AvailableBuses from "../Components/AvailableBuses/AvailableBuses";
 import axios from "axios";
 import { toast } from "react-toastify";
 import debounce from "lodash/debounce";
 import { motion } from "framer-motion";
 
-const REACT_APP_BACKEND_URL = process.env.REACT_APP_API_URL || "https://bus-booking-cw48.onrender.com";
-console.log("REACT_APP_BACKEND_URL:", REACT_APP_BACKEND_URL);
+const REACT_APP_BACKEND_URL = process.env.REACT_APP_API_URL ;
+// console.log("REACT_APP_BACKEND_URL:", REACT_APP_BACKEND_URL);
 
 const SearchPage = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

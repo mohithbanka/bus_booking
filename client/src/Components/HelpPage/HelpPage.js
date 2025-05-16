@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { motion } from "framer-motion";
 
-const REACT_APP_BACKEND_URL = "http://localhost:5000";
+// const REACT_APP_BACKEND_URL = "http://localhost:5000";
+const REACT_APP_BACKEND_URL = process.env.REACT_APP_API_URL ;
+console.log("REACT_APP_BACKEND_URL:", REACT_APP_BACKEND_URL);
 
 const HelpPage = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

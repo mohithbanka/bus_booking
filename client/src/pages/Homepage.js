@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Navbar from "../Components/Navbar/Navbar";
+// import Navbar from "../Components/Navbar/Navbar";
 import Header from "../Components/Header/Header";
 import HeroSection from "../Components/HeroSection/HeroSection";
 import PopularRoutes from "../Components/PopularRoutes/PopularRoutes";
 import Apppromo from "../Components/Apppromo/AppPromo";
 import Faq from "../Components/Faqs/Faq";
-import Footer from "../Components/Footer/Footer";
+// import Footer from "../Components/Footer/Footer";
 
 class ErrorBoundary extends Component {
   state = { hasError: false, error: null };

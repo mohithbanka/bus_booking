@@ -3,11 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 // Define API_BASE_URL with environment-aware fallback
-const API_BASE_URL =
-  process.env.REACT_APP_API_URL ||
-  (process.env.NODE_ENV === "production"
-    ? "https://bus-booking-cw48.onrender.com"
-    : "http://localhost:5000");
+const API_BASE_URL = process.env.REACT_APP_API_URL;
 // console.log("API_BASE_URL:", API_BASE_URL);
 
 const Register = () => {

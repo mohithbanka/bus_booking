@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+const REACT_APP_BACKEND_URL = process.env.REACT_APP_API_URL ;
+console.log("REACT_APP_BACKEND_URL:", REACT_APP_BACKEND_URL);
 
 const PaymentMethods = ({ paymentMethods }) => {
   const [isAdding, setIsAdding] = useState(false);
@@ -8,7 +10,7 @@ const PaymentMethods = ({ paymentMethods }) => {
     e.preventDefault();
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://localhost:5000/api/payment-methods", {
+      const response = await fetch(`${REACT_APP_BACKEND_URL}/api/payment-methods`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

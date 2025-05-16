@@ -4576,3 +4576,4 @@
 {"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-16T07:25:48.523Z"}
 {"level":"info","message":"Server running on port 5000","timestamp":"2025-05-16T07:28:54.050Z"}
 {"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-16T07:28:56.807Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-16T07:33:25.246Z"}
