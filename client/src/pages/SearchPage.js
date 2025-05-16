@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import Sidebar from "../Components/Sidebar/Sidebar";
+// import Sidebar from "../Components/Sidebar/Sidebar";
 import AvailableBuses from "../Components/AvailableBuses/AvailableBuses";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -185,11 +185,11 @@ const SearchPage = () => {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } lg:static lg:translate-x-0 transition-transform duration-300 ease-in-out z-40`}
       >
-        <Sidebar
+        {/* <Sidebar
           filters={filters}
           onFilterChange={handleFilterChange}
           buses={buses}
-        />
+        /> */}
       </aside>
 
       <div className="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto">
