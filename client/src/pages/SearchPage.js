@@ -90,7 +90,7 @@ const SearchPage = () => {
             seatsAvailable: filters.seatAvailability.singleSeats ? "1" : "",
           },
           timeout: 10000,
-          withCredentials: true,
+          withCredentials: true, // For session-based auth
         });
 
         const fetchedBuses = Array.isArray(response.data)
@@ -262,5 +262,4 @@ const SearchPage = () => {
     </motion.div>
   );
 };
-
 export default SearchPage;
