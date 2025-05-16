@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import Sidebar from "../Components/Sidebar/Sidebar"; // Ensure this path is correct
+import Sidebar from "../Components/Sidebar";
 import AvailableBuses from "../Components/AvailableBuses/AvailableBuses";
 import axios from "axios";
 import { toast } from "react-toastify";
 import debounce from "lodash/debounce";
 import { motion } from "framer-motion";
 
-const REACT_APP_BACKEND_URL = process.env.REACT_APP_API_URL || "https://bus-booking-cw48.onrender.com";
-console.log("REACT_APP_BACKEND_URL:", REACT_APP_BACKEND_URL);
+const REACT_APP_BACKEND_URL = process.env.REACT_APP_API_URL;
+// console.log("REACT_APP_BACKEND_URL:", REACT_APP_BACKEND_URL);
 
 const SearchPage = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -21,7 +21,8 @@ const SearchPage = () => {
   const fromCity = queryParams.get("fromCity")?.toUpperCase() || "";
   const toCity = queryParams.get("toCity")?.toUpperCase() || "";
   const travelDate = queryParams.get("travelDate") || "";
-  const busTypes = queryParams.get("busTypes")?.split(",").filter(Boolean) || [];
+  const busTypes =
+    queryParams.get("busTypes")?.split(",").filter(Boolean) || [];
   const liveTracking = queryParams.get("liveTracking") === "true";
   const primo = queryParams.get("primo") === "true";
   const seatsAvailable = queryParams.get("seatsAvailable") || "1";
@@ -75,9 +76,13 @@ const SearchPage = () => {
             busTypes: Object.keys(filters.busTypes)
               .filter((key) => filters.busTypes[key])
               .map((key) =>
-                key === "seater" ? "Seater" :
-                key === "sleeper" ? "Sleeper" :
-                key === "ac" ? "AC" : "NonAC"
+                key === "seater"
+                  ? "Seater"
+                  : key === "sleeper"
+                  ? "Sleeper"
+                  : key === "ac"
+                  ? "AC"
+                  : "NonAC"
               )
               .join(","),
             liveTracking: filters.liveTracking,
@@ -103,10 +108,13 @@ const SearchPage = () => {
         console.error("Fetch buses error:", err);
         let errorMessage;
         if (err.response) {
-          errorMessage = err.response.data?.error || `Server error: ${err.response.statusText}`;
+          errorMessage =
+            err.response.data?.error ||
+            `Server error: ${err.response.statusText}`;
           toast.error(errorMessage);
         } else if (err.request) {
-          errorMessage = "Network error or CORS issue. Please check your connection or contact support.";
+          errorMessage =
+            "Network error or CORS issue. Please check your connection or contact support.";
           toast.error("Unable to connect to the server. Please try again.");
         } else {
           errorMessage = "An unexpected error occurred. Please try again.";
@@ -131,9 +139,13 @@ const SearchPage = () => {
         busTypes: Object.keys(newFilters.busTypes)
           .filter((key) => newFilters.busTypes[key])
           .map((key) =>
-            key === "seater" ? "Seater" :
-            key === "sleeper" ? "Sleeper" :
-            key === "ac" ? "AC" : "NonAC"
+            key === "seater"
+              ? "Seater"
+              : key === "sleeper"
+              ? "Sleeper"
+              : key === "ac"
+              ? "AC"
+              : "NonAC"
           )
           .join(","),
         liveTracking: newFilters.liveTracking.toString(),
