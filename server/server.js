@@ -1,3 +1,4 @@
+// server/index.js
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -9,10 +10,9 @@ const winston = require("winston");
 
 dotenv.config();
 
-// Initialize Passport
+// Passport Config
 try {
   require("./config/passport");
-  // console.log("Passport configuration loaded successfully");
 } catch (error) {
   console.error("Failed to load Passport configuration:", error);
   process.exit(1);
@@ -21,25 +21,41 @@ try {
 const authRoutes = require("./routes/auth");
 const busRoutes = require("./routes/buses");
 const bookingRoutes = require("./routes/bookings");
-const apiRoutes = require("./routes/api"); // Add this
+const apiRoutes = require("./routes/api");
 const logger = require("./utils/logger");
 
 const app = express();
 const port = process.env.PORT || 5000;
 
+// CORS Configuration
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://your-frontend-domain.vercel.app", // Replace with your deployed frontend URL
+];
+
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Session configuration
+// Sessions
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret: process.env.SESSION_SECRET || "fallback-secret",
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -50,11 +66,11 @@ app.use(
   })
 );
 
-// Initialize Passport
+// Passport
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Rate limiting for auth routes
+// Rate limiting
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100,
@@ -63,7 +79,7 @@ const authLimiter = rateLimit({
 app.use("/auth/login", authLimiter);
 app.use("/auth/register", authLimiter);
 
-// Connect to MongoDB
+// MongoDB
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
@@ -79,13 +95,13 @@ mongoose
 app.use("/auth", authRoutes);
 app.use("/buses", busRoutes);
 app.use("/bookings", bookingRoutes);
-app.use("/api", apiRoutes); // Add this
+app.use("/api", apiRoutes);
 
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to Bus Booking API" });
 });
 
-// Error handling
+// Error Handler
 app.use((err, req, res, next) => {
   logger.error("Server error", { error: err.message, stack: err.stack });
   res.status(500).json({ message: "Internal server error" });

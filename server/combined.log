@@ -4535,3 +4535,42 @@
 {"level":"info","message":"Getting user bookings","timestamp":"2025-05-15T15:11:09.137Z","userId":"6825dda37bae2b512f78bb4b"}
 {"level":"info","message":"Server running on port 5000","timestamp":"2025-05-15T15:12:00.978Z"}
 {"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-15T15:12:01.045Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-16T06:55:27.794Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-16T06:55:29.671Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-16T06:56:38.764Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-16T06:56:38.866Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-16T06:57:02.606Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-16T06:57:02.646Z"}
+{"level":"info","message":"Connected to MongoDB for seeding","timestamp":"2025-05-16T06:57:57.667Z"}
+{"level":"info","message":"Cleared existing data","timestamp":"2025-05-16T06:57:59.499Z"}
+{"level":"info","message":"Seeded 5 Users","timestamp":"2025-05-16T06:58:00.056Z"}
+{"level":"info","message":"Seeded 6 Routes","timestamp":"2025-05-16T06:58:00.128Z"}
+{"level":"info","message":"Seeded 12 Buses","timestamp":"2025-05-16T06:58:00.218Z"}
+{"level":"info","message":"Seeded 8 Bookings","timestamp":"2025-05-16T06:58:00.308Z"}
+{"level":"info","message":"Seeded 8 Payments","timestamp":"2025-05-16T06:58:00.396Z"}
+{"level":"info","message":"Updated Bookings with Payment IDs","timestamp":"2025-05-16T06:58:00.872Z"}
+{"level":"info","message":"Seeding completed successfully","timestamp":"2025-05-16T06:58:00.874Z"}
+{"level":"info","message":"MongoDB connection closed","timestamp":"2025-05-16T06:58:00.899Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-16T07:00:33.530Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-16T07:00:34.989Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-16T07:01:50.376Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-16T07:01:53.931Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-16T07:03:51.801Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-16T07:03:51.916Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-16T07:04:01.128Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-16T07:04:01.199Z"}
+{"level":"info","message":"POST /auth/register called","timestamp":"2025-05-16T07:04:14.591Z"}
+{"level":"info","message":"Register: User mohithbanka285@gmail.com created successfully","timestamp":"2025-05-16T07:04:14.948Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-16T07:04:19.348Z"}
+{"info":{"message":"Invalid email or password"},"level":"warn","message":"Login: Authentication failed","timestamp":"2025-05-16T07:04:19.409Z"}
+{"level":"info","message":"POST /auth/login called","timestamp":"2025-05-16T07:04:23.596Z"}
+{"level":"info","message":"Local strategy: User mohithbanka285@gmail.com authenticated successfully","timestamp":"2025-05-16T07:04:23.874Z"}
+{"level":"info","message":"Login: User mohithbanka285@gmail.com logged in successfully","timestamp":"2025-05-16T07:04:23.878Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-16T07:04:24.292Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-16T07:04:32.272Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-16T07:04:50.845Z"}
+{"level":"info","message":"GET /auth/me called","timestamp":"2025-05-16T07:05:09.396Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-16T07:22:55.707Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-16T07:22:57.692Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-16T07:25:44.727Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-16T07:25:48.523Z"}
