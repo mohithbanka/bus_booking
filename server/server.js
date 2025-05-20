@@ -34,12 +34,12 @@ const allowedOrigins = [
 app.use(
   cors({
     origin: (origin, callback) => {
-      logger.info(`CORS check: origin=${origin}`);
+      // logger.info(`CORS check: origin=${origin}`);
       if (!origin || allowedOrigins.includes(origin)) {
-        logger.info(`CORS allowed for ${origin}`);
+        // logger.info(`CORS allowed for ${origin}`);
         callback(null, true);
       } else {
-        logger.warn(`CORS denied for ${origin}`);
+        // logger.warn(`CORS denied for ${origin}`);
         callback(new Error(`Not allowed by CORS: ${origin}`));
       }
     },
@@ -51,7 +51,7 @@ app.use(
 
 // Log all requests
 app.use((req, res, next) => {
-  logger.info(`Request: ${req.method} ${req.url}`);
+  // logger.info(`Request: ${req.method} ${req.url}`);
   next();
 });
 
@@ -115,5 +115,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => {
-  logger.info(`Server running on port ${port}`);
+  // logger.info(`Server running on port ${port}`);
 });
