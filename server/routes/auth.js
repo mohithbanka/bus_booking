@@ -2,134 +2,192 @@ const express = require("express");
 const passport = require("passport");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const rateLimit = require("express-rate-limit");
+const { body, validationResult } = require("express-validator");
 const User = require("../models/User");
-const logger = require("../utils/logger");
 
 const router = express.Router();
 
+// Rate limiter
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  message: { message: "Too many requests, please try again later" },
+});
+
 // Generate JWT
 const generateToken = (user) => {
+  if (!process.env.JWT_SECRET) {
+    throw new Error("JWT_SECRET is not defined");
+  }
   return jwt.sign(
-    { id: user._id, email: user.email, name: user.name },
+    {
+      id: user._id,
+      email: user.email,
+      name: user.name,
+      iat: Math.floor(Date.now() / 1000),
+      role: user.role || "user",
+    },
     process.env.JWT_SECRET,
     { expiresIn: "1d" }
   );
 };
 
+// Input validation for registration
+const registerValidation = [
+  body("email").isEmail().normalizeEmail().withMessage("Invalid email format"),
+  body("password")
+    .isLength({ min: 6 })
+    .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/)
+    .withMessage(
+      "Password must be at least 8 characters and include one uppercase letter, one lowercase letter, and one number"
+    ),
+  body("name").trim().notEmpty().withMessage("Name is required"),
+];
+
 // Register (Local)
-router.post("/register", async (req, res) => {
-  // logger.info("POST /auth/register called");
+router.post("/register", authLimiter, registerValidation, async (req, res) => {
   try {
-    const { email, password, name } = req.body;
-    // console.log(req.body);
-    
-    if (!email || !password || !name) {
-      // logger.warn("Register: Missing required fields");
-      return res.status(400).json({ message: "Email, password, and name are required" });
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
     }
+
+    const { email, password, name } = req.body;
 
     const existingUser = await User.findOne({ email: email.toLowerCase() });
     if (existingUser) {
-      // logger.warn(`Register: Email ${email} already registered`);
       return res.status(400).json({ message: "Email already registered" });
     }
 
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await bcrypt.hash(password, 12);
     const user = new User({
       email: email.toLowerCase(),
       password: hashedPassword,
       name,
+      provider: "local",
+      role: "user",
     });
     await user.save();
-    // logger.info(`Register: User ${email} created successfully`);
 
     const token = generateToken(user);
     res.status(201).json({
       message: "Registration successful",
-      user: { id: user._id, email: user.email, name: user.name },
+      user: { id: user._id, email: user.email, name: user.name, role: user.role },
       token,
     });
   } catch (error) {
-    // logger.error("Register: Error", { error });
-    res.status(500).json({ message: "Registration failed" });
+    if (error.code === 11000) {
+      return res.status(400).json({ message: "Email already registered" });
+    }
+    console.error("Register error:", error);
+    res.status(500).json({ message: "Registration failed", error: error.message });
   }
 });
 
+// Input validation for login
+const loginValidation = [
+  body("email").isEmail().normalizeEmail().withMessage("Invalid email format"),
+  body("password").notEmpty().withMessage("Password is required"),
+];
+
 // Login (Local)
-router.post("/login", (req, res, next) => {
-  // logger.info("POST /auth/login called");
+router.post("/login", authLimiter, loginValidation, (req, res, next) => {
   passport.authenticate("local", { session: false }, (err, user, info) => {
     if (err) {
-      // logger.error("Login: Authentication error", { err });
-      return next(err);
+      console.error("Local login error:", err);
+      return res.status(500).json({ message: "Authentication error" });
     }
     if (!user) {
-      // logger.warn("Login: Authentication failed", { info });
-      return res.status(401).json({ message: info.message || "Invalid email or password" });
+      return res.status(401).json({ message: info.message || "Invalid credentials" });
     }
     const token = generateToken(user);
-    logger.info(`Login: User ${user.email} logged in successfully`);
     res.json({
       message: "Login successful",
-      user: { id: user._id, email: user.email, name: user.name },
+      user: {
+        id: user._id,
+        email: user.email,
+        name: user.name,
+        role: user.role,
+      },
       token,
     });
   })(req, res, next);
 });
 
 // Google OAuth
-router.get("/google", (req, res, next) => {
-  logger.info("GET /auth/google called");
-  passport.authenticate("google", { scope: ["profile", "email"] })(req, res, next);
-});
+router.get(
+  "/google",
+  (req, res, next) => {
+    res.clearCookie("jwt");
+    next();
+  },
+  passport.authenticate("google", {
+    scope: ["profile", "email"],
+    prompt: "select_account",
+    session: false,
+    state: Date.now().toString(),
+  })
+);
 
 // Google OAuth Callback
-router.get("/google/callback", (req, res, next) => {
-  // logger.info("GET /auth/google/callback called");
-  passport.authenticate("google", { session: true }, (err, user) => {
-    if (err) {
-      logger.error("Google callback: Authentication error", { err });
-      return res.redirect(`${process.env.FRONTEND_URL}/login?error=auth_failed`);
-    }
-    if (!user) {
-      logger.warn("Google callback: Authentication failed");
-      return res.redirect(`${process.env.FRONTEND_URL}/login?error=auth_failed`);
-    }
-    req.login(user, (err) => {
-      if (err) {
-        logger.error("Google callback: Session login error", { err });
-        return res.redirect(`${process.env.FRONTEND_URL}/login?error=session_failed`);
+router.get(
+  "/google/callback",
+  passport.authenticate("google", {
+    session: false,
+    failureRedirect: `${process.env.FRONTEND_URL}/login?error=auth_failed`,
+    failureMessage: true,
+  }),
+  async (req, res) => {
+    try {
+      // console.log("Google callback: User authenticated", req.user ? req.user.email : "No user");
+      if (!req.user) {
+        const errorMessage = req.authInfo?.message || "Authentication failed";
+        // console.log("Google callback: Authentication failed", errorMessage);
+        return res.redirect(
+          `${process.env.FRONTEND_URL}/login?error=${encodeURIComponent(errorMessage)}`
+        );
       }
-      logger.info(`Google callback: User ${user.email} logged in successfully`);
-      const token = generateToken(user);
-      res.redirect(`${process.env.FRONTEND_URL}/dashboard?token=${token}`);
-    });
-  })(req, res, next);
-});
+      const token = generateToken(req.user);
+      res.cookie("jwt", token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+        maxAge: 24 * 60 * 60 * 1000,
+      });
+      res.redirect(`${process.env.FRONTEND_URL}/login?token=${token}`);
+    } catch (error) {
+      console.error("Google callback error:", error);
+      res.redirect(
+        `${process.env.FRONTEND_URL}/login?error=${encodeURIComponent(error.message)}`
+      );
+    }
+  }
+);
 
 // Logout
 router.post("/logout", (req, res) => {
-  // logger.info("POST /auth/logout called");
-  req.logout((err) => {
-    if (err) {
-      logger.error("Logout: Error", { err });
-      return res.status(500).json({ message: "Logout failed" });
-    }
-    req.session.destroy((err) => {
-      if (err) {
-        logger.error("Logout: Session destroy error", { err });
-        return res.status(500).json({ message: "Logout failed" });
-      }
-      logger.info("Logout: User logged out successfully");
-      res.json({ message: "Logout successful" });
-    });
-  });
+  try {
+    res.clearCookie("jwt");
+    res.json({ message: "Logout successful" });
+  } catch (error) {
+    console.error("Logout error:", error);
+    res.status(500).json({ message: "Logout failed", error: error.message });
+  }
 });
 
-// Check authentication (protected route)
+// Check authentication
 router.get("/me", require("../middleware/auth"), (req, res) => {
-  logger.info("GET /auth/me called");
-  res.json({ user: { id: req.user.id, email: req.user.email, name: req.user.name } });
+  res.json({
+    user: {
+      id: req.user.id,
+      email: req.user.email,
+      name: req.user.name,
+      role: req.user.role,
+      phone: req.user.phone,
+      avatar: req.user.avatar,
+    },
+  });
 });
 
 module.exports = router;

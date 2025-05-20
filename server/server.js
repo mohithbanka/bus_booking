@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const session = require("express-session");
 const passport = require("passport");
 const rateLimit = require("express-rate-limit");
 const dotenv = require("dotenv");
@@ -34,12 +33,9 @@ const allowedOrigins = [
 app.use(
   cors({
     origin: (origin, callback) => {
-      // logger.info(`CORS check: origin=${origin}`);
       if (!origin || allowedOrigins.includes(origin)) {
-        // logger.info(`CORS allowed for ${origin}`);
         callback(null, true);
       } else {
-        // logger.warn(`CORS denied for ${origin}`);
         callback(new Error(`Not allowed by CORS: ${origin}`));
       }
     },
@@ -51,7 +47,7 @@ app.use(
 
 // Log all requests
 app.use((req, res, next) => {
-  // logger.info(`Request: ${req.method} ${req.url}`);
+  logger.info(`Request: ${req.method} ${req.url}`);
   next();
 });
 
@@ -59,23 +55,8 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Sessions
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET || "fallback-secret",
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-      secure: process.env.NODE_ENV === "production",
-      httpOnly: true,
-      maxAge: 24 * 60 * 60 * 1000,
-    },
-  })
-);
-
 // Passport
 app.use(passport.initialize());
-app.use(passport.session());
 
 // Rate limiting
 const authLimiter = rateLimit({
@@ -115,5 +96,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => {
-  // logger.info(`Server running on port ${port}`);
+  logger.info(`Server running on port ${port}`);
 });

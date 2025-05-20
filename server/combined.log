@@ -4577,3 +4577,118 @@
 {"level":"info","message":"Server running on port 5000","timestamp":"2025-05-16T07:28:54.050Z"}
 {"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-16T07:28:56.807Z"}
 {"level":"info","message":"GET /auth/me called","timestamp":"2025-05-16T07:33:25.246Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T17:54:56.208Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T17:55:13.504Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T17:56:10.227Z"}
+{"level":"info","message":"Local strategy: User mohithbanka285@gmail.com authenticated successfully","timestamp":"2025-05-20T17:57:05.252Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T17:59:24.678Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:06:28.541Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:08:41.561Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:11:08.390Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:11:21.631Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:11:38.196Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:22:40.416Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:26:30.707Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:29:04.547Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:29:07.105Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:29:19.248Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:29:22.473Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:29:37.979Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:29:41.600Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:29:53.823Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747765777900&code=4%2F0AUJR-x5u0CZj0huees9AbHtqHr5oEogfCnW1X4Nr_99lpkHJsAvL0PR-nMacvXQ1celgYA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none","timestamp":"2025-05-20T18:29:57.265Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:30:01.113Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:30:07.395Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747765777900&code=4%2F0AUJR-x72KughMyZRZFXFVXTEf1TSisVaYytLbUgJQmvJ5U_FP9GQbF98uR6bvMi1rVV5NA&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none","timestamp":"2025-05-20T18:30:11.580Z"}
+{"error":"Cannot read properties of undefined (reading 'messages')","level":"error","message":"Server error","stack":"TypeError: Cannot read properties of undefined (reading 'messages')\n    at allFailed (M:\\New folder\\busbooking\\server\\node_modules\\passport\\lib\\middleware\\authenticate.js:143:46)\n    at attempt (M:\\New folder\\busbooking\\server\\node_modules\\passport\\lib\\middleware\\authenticate.js:183:28)\n    at strategy.fail (M:\\New folder\\busbooking\\server\\node_modules\\passport\\lib\\middleware\\authenticate.js:314:9)\n    at verified (M:\\New folder\\busbooking\\server\\node_modules\\passport-oauth2\\lib\\strategy.js:185:40)\n    at Strategy._verify (M:\\New folder\\busbooking\\server\\config\\passport.js:64:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2025-05-20T18:30:12.538Z"}
+{"level":"info","message":"Request: GET /favicon.ico","timestamp":"2025-05-20T18:30:12.793Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:31:45.808Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:31:50.683Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:32:08.283Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:32:21.526Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:32:22.341Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:32:32.326Z"}
+{"level":"info","message":"Request: GET /api/bookings","timestamp":"2025-05-20T18:32:32.342Z"}
+{"level":"info","message":"Request: GET /api/payment-methods","timestamp":"2025-05-20T18:32:32.366Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:32:37.555Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747765941438&code=4%2F0AUJR-x4s8jJIJAkQakmxblNZj2NvEVJ9bXwACHCI3rQyWzxs4us2LkBygnnrTh4mart2ug&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none","timestamp":"2025-05-20T18:32:41.506Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:32:42.856Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:32:54.931Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747765941438&code=4%2F0AUJR-x512E1rm2KOvgaWR82dCBK_h7kzzgRh_R6Gc0GX8UcDrOD864QrzFxjPIIkDclhxQ&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none","timestamp":"2025-05-20T18:32:58.347Z"}
+{"error":"Cannot read properties of undefined (reading 'messages')","level":"error","message":"Server error","stack":"TypeError: Cannot read properties of undefined (reading 'messages')\n    at allFailed (M:\\New folder\\busbooking\\server\\node_modules\\passport\\lib\\middleware\\authenticate.js:143:46)\n    at attempt (M:\\New folder\\busbooking\\server\\node_modules\\passport\\lib\\middleware\\authenticate.js:183:28)\n    at strategy.fail (M:\\New folder\\busbooking\\server\\node_modules\\passport\\lib\\middleware\\authenticate.js:314:9)\n    at verified (M:\\New folder\\busbooking\\server\\node_modules\\passport-oauth2\\lib\\strategy.js:185:40)\n    at Strategy._verify (M:\\New folder\\busbooking\\server\\config\\passport.js:64:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2025-05-20T18:32:59.248Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:33:13.605Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747765941438&code=4%2F0AUJR-x51eEMuLRgM-h_lja_KI0Rnk_fVIuT3uYFnKmhcEej21JJEjr6pS-6c28v5RuharA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none","timestamp":"2025-05-20T18:33:16.968Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:33:18.218Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:33:18.335Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:33:26.069Z"}
+{"level":"info","message":"Request: GET /api/bookings","timestamp":"2025-05-20T18:33:26.075Z"}
+{"level":"info","message":"Request: GET /api/payment-methods","timestamp":"2025-05-20T18:33:26.082Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:33:39.181Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747765941438&code=4%2F0AUJR-x7kLgA1ChoE5dIIj22b-tNhUO9ASXSwJFkpeM8b3gCL9lCg1HwZxpxE99DMjt3_2w&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none","timestamp":"2025-05-20T18:33:41.993Z"}
+{"error":"Cannot read properties of undefined (reading 'messages')","level":"error","message":"Server error","stack":"TypeError: Cannot read properties of undefined (reading 'messages')\n    at allFailed (M:\\New folder\\busbooking\\server\\node_modules\\passport\\lib\\middleware\\authenticate.js:143:46)\n    at attempt (M:\\New folder\\busbooking\\server\\node_modules\\passport\\lib\\middleware\\authenticate.js:183:28)\n    at strategy.fail (M:\\New folder\\busbooking\\server\\node_modules\\passport\\lib\\middleware\\authenticate.js:314:9)\n    at verified (M:\\New folder\\busbooking\\server\\node_modules\\passport-oauth2\\lib\\strategy.js:185:40)\n    at Strategy._verify (M:\\New folder\\busbooking\\server\\config\\passport.js:64:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2025-05-20T18:33:42.941Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:38:13.398Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:38:15.423Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:38:22.309Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:38:24.257Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:38:33.876Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:38:34.726Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:38:41.016Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:38:41.081Z"}
+{"level":"info","message":"Request: GET /api/bookings","timestamp":"2025-05-20T18:38:41.089Z"}
+{"level":"info","message":"Request: GET /api/payment-methods","timestamp":"2025-05-20T18:38:41.108Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:38:53.985Z"}
+{"level":"info","message":"Request: GET /api/bookings","timestamp":"2025-05-20T18:38:53.992Z"}
+{"level":"info","message":"Request: GET /api/payment-methods","timestamp":"2025-05-20T18:38:54.001Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:38:57.947Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747766313806&code=4%2F0AUJR-x4igvMXdVE5awf90OMc5ix2cSpUt99ukmjtELq5-6dy5AEdMBg98W_8mmLsx7OUFA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none","timestamp":"2025-05-20T18:39:01.604Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:39:02.717Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747765941438&code=4%2F0AUJR-x7X4UpnCfa72RLLH6B4MnBRtvnb_83tAVAp8_88wzFg-mnOanaOYQtjvJ-Pf7cI1Q&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none","timestamp":"2025-05-20T18:39:14.511Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:41:00.205Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:41:04.054Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:41:09.250Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:41:17.898Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:41:19.911Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:42:04.666Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747766477821&code=4%2F0AUJR-x6KEfGsyDR7Xd04joj9GA7u8sJrfVgrrB1CXBHvlpE8moJTR3aQZdvz9Ro99akpYg&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none","timestamp":"2025-05-20T18:42:07.742Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:42:21.218Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747766477821&code=4%2F0AUJR-x6KEfGsyDR7Xd04joj9GA7u8sJrfVgrrB1CXBHvlpE8moJTR3aQZdvz9Ro99akpYg&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none","timestamp":"2025-05-20T18:42:21.260Z"}
+{"error":"Bad Request","level":"error","message":"Server error","stack":"TokenError: Bad Request\n    at OAuth2Strategy.parseErrorResponse (M:\\New folder\\busbooking\\server\\node_modules\\passport-oauth2\\lib\\strategy.js:373:12)\n    at OAuth2Strategy._createOAuthError (M:\\New folder\\busbooking\\server\\node_modules\\passport-oauth2\\lib\\strategy.js:420:16)\n    at M:\\New folder\\busbooking\\server\\node_modules\\passport-oauth2\\lib\\strategy.js:177:45\n    at M:\\New folder\\busbooking\\server\\node_modules\\oauth\\lib\\oauth2.js:196:18\n    at passBackControl (M:\\New folder\\busbooking\\server\\node_modules\\oauth\\lib\\oauth2.js:132:9)\n    at IncomingMessage.<anonymous> (M:\\New folder\\busbooking\\server\\node_modules\\oauth\\lib\\oauth2.js:157:7)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-05-20T18:42:21.658Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:42:26.005Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747766477821&code=4%2F0AUJR-x40zpRVWgl8ba_uF7iGEgZY6IFtrGdzo5haALaJef9Iq2jsr8dmF6kpPaUKkB1YOQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none","timestamp":"2025-05-20T18:42:26.432Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:42:35.323Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:42:36.996Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:42:40.897Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747766555222&code=4%2F0AUJR-x60O4L3QJ1Dede52zYIOH9s1RXREfnRFc8VjjFu1W1pWBghhcoX5KPUlekKyRVbJA&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none","timestamp":"2025-05-20T18:42:44.212Z"}
+{"error":"Cannot read properties of undefined (reading 'messages')","level":"error","message":"Server error","stack":"TypeError: Cannot read properties of undefined (reading 'messages')\n    at allFailed (M:\\New folder\\busbooking\\server\\node_modules\\passport\\lib\\middleware\\authenticate.js:143:46)\n    at attempt (M:\\New folder\\busbooking\\server\\node_modules\\passport\\lib\\middleware\\authenticate.js:183:28)\n    at strategy.fail (M:\\New folder\\busbooking\\server\\node_modules\\passport\\lib\\middleware\\authenticate.js:314:9)\n    at verified (M:\\New folder\\busbooking\\server\\node_modules\\passport-oauth2\\lib\\strategy.js:185:40)\n    at Strategy._verify (M:\\New folder\\busbooking\\server\\config\\passport.js:64:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2025-05-20T18:42:44.934Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:43:14.996Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747766555222&code=4%2F0AUJR-x7DeOYab78EBuo-mBIATilWp5lnBPrYHlTUcVQi55A1mTOQyJULaUxMWFiKp6sMZw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&hd=gvpce.ac.in&prompt=none","timestamp":"2025-05-20T18:43:22.460Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:43:24.399Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:43:28.917Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747766555222&code=4%2F0AUJR-x5AbQmjaIWNsE6FyOy9mXgUNghfZjzHbMLZn0VN-LwO8E8_R28bwz5AFHFKlTungA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&hd=gvpce.ac.in&prompt=none","timestamp":"2025-05-20T18:43:34.080Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:44:08.509Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:44:13.912Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:44:27.582Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:44:30.823Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:50:48.876Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747766667502&code=4%2F0AUJR-x5YZzF9PtOhQLVaTuKfC7Yvhzw4ytzXkFQqyypqLMyqaLBG9SzRpWcnBGh6GQv5lA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none","timestamp":"2025-05-20T18:50:52.586Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:50:56.290Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:50:56.350Z"}
+{"level":"info","message":"Request: GET /api/bookings","timestamp":"2025-05-20T18:50:56.360Z"}
+{"level":"info","message":"Request: GET /api/payment-methods","timestamp":"2025-05-20T18:50:56.373Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:51:29.397Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747766667502&code=4%2F0AUJR-x6NLI-YL6XyLq2Xr--yWTCFfq3Ra6dOeRJUdBoQ_4mfm7iC4rqUWI-oKaotATjBEw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent","timestamp":"2025-05-20T18:51:35.407Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:51:37.050Z"}
+{"level":"info","message":"Request: GET /api/bookings","timestamp":"2025-05-20T18:51:37.106Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:51:37.112Z"}
+{"level":"info","message":"Request: GET /api/payment-methods","timestamp":"2025-05-20T18:51:37.117Z"}
+{"level":"info","message":"Request: GET /auth/google","timestamp":"2025-05-20T18:51:45.629Z"}
+{"level":"info","message":"Request: GET /auth/google/callback?state=1747766667502&code=4%2F0AUJR-x7FT3aqQos84tpQiUac7D9cPMaeL97jt4vUKp2xfMuhfojuaVzhoOUCQ0b6Bbliiw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none","timestamp":"2025-05-20T18:51:48.797Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:51:49.953Z"}
+{"level":"info","message":"Request: GET /auth/me","timestamp":"2025-05-20T18:51:50.028Z"}
+{"level":"info","message":"Request: GET /api/bookings","timestamp":"2025-05-20T18:51:50.032Z"}
+{"level":"info","message":"Request: GET /api/payment-methods","timestamp":"2025-05-20T18:51:50.041Z"}
+{"level":"info","message":"Request: GET /buses?fromCity=DELHI&toCity=MUMBAI&travelDate=2025-05-21&busTypes=&liveTracking=false&primo=false&seatsAvailable=1","timestamp":"2025-05-20T18:52:14.408Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:53:48.755Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:53:52.042Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-20T18:54:23.082Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-20T18:54:26.002Z"}
